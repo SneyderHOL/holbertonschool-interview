@@ -5,7 +5,7 @@
 def canUnlockAll(boxes):
     '''method to determine if all boxes can be opened'''
     if boxes is None or len(boxes) == 0:
-        return False
+        return True
     boxes_open = [False]*len(boxes)
     boxes_open[0] = True
     open_box(boxes[0], boxes, boxes_open)
