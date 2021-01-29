@@ -13,8 +13,8 @@ def canUnlockAll(boxes):
             for key in boxes[box_number]:
                 if key >= len(boxes):
                     continue
-                boxes_open[key] = True;
-                open_box(boxes[key],boxes_open)
+                boxes_open[key] = True
+                open_box(boxes[key], boxes_open)
     if False in boxes_open:
         return False
     return True
