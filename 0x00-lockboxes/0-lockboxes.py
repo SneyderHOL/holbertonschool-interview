@@ -4,28 +4,37 @@
 
 def canUnlockAll(boxes):
     '''method to determine if all boxes can be opened'''
-    if boxes is None:
-        return False
-    boxes_open = [False]*len(boxes)
-    boxes_open[0] = True
-    for box_number in range(len(boxes)):
-        if boxes_open[box_number]:
+    total_number = total_boxes(boxes)
+    open_number = 0
+    dataset = {0}
+    size = len(boxes)
+    for box_number in range(size):
+        if box_number in dataset:
+            open_number += box_number
             for key in boxes[box_number]:
-                if key >= len(boxes):
+                if key >= size:
                     continue
-                boxes_open[key] = True
-                open_box(boxes[key], boxes_open)
-    if False in boxes_open:
+                dataset.add(key)
+                open_box(boxes[key], dataset, size)
+    if open_number != total_number:
         return False
     return True
 
 
-def open_box(box, boxes_open):
+def open_box(box, data, size):
     '''method to open boxes'''
     if len(box) == 0:
         return
     for key in box:
-        if key >= len(boxes_open):
+        if key >= size:
             continue
-        if boxes_open[key] is False:
-            boxes_open[key] = True
+        if key not in data:
+            data.add(key)
+
+
+def total_boxes(boxes):
+    '''method to calculate the sum of indexes'''
+    counter = 0
+    for index in range(len(boxes)):
+        counter += index
+    return counter
