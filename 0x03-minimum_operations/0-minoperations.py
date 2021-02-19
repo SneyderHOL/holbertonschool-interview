@@ -7,9 +7,11 @@ def copy_all(string):
     """Method to copy a string"""
     pass
 
+
 def paste(string):
     """Method to concatenate the same strings"""
     pass
+
 
 def minOperations(n):
     """Given a number n, minOperationsis a method that calculates the fewest
