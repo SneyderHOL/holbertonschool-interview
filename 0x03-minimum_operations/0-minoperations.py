@@ -3,6 +3,7 @@
 minOperations module
 """
 
+
 def copy_all(string):
     """Method to copy a string"""
     pass
@@ -15,12 +16,12 @@ def paste(string):
 
 def minOperations(n):
     """Given a number n, minOperationsis a method that calculates the fewest
-       number of operations needed to result in exactly n H characters in 
+       number of operations needed to result in exactly n H characters in
        the file."""
     char = 'H'
     num_copy = 0
     num_paste = 0
-    paste = false
+    paste = False
     operations = n
     limit = 2
     size = 1
