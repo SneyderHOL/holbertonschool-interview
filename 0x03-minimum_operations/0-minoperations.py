@@ -16,6 +16,7 @@ def copy_all(string, ret=False):
 
 copy_all.counter = 0
 
+
 def paste(string, cp_string, ret=False):
     """Method to concatenate the same strings"""
     if ret:
@@ -28,10 +29,12 @@ def paste(string, cp_string, ret=False):
 
 paste.counter = 0
 
+
 def reset_counters(c=0, p=0):
     """Method to reset the counters method"""
     paste.counter = p
     copy_all.counter = c
+
 
 def execution(char, n, limit, min_op):
     """Method that iterate to find the minimum opeations quantity"""
@@ -66,4 +69,3 @@ def minOperations(n):
         limit += 1
     reset_counters()
     return min_op
-
