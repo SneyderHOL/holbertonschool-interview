@@ -3,6 +3,7 @@
 minOperations module
 """
 
+
 def minOperations(n):
     """Given a number n, minOperationsis a method that calculates the fewest
        number of operations needed to result in exactly n H characters in
