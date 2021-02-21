@@ -50,6 +50,8 @@ def minOperations(n):
     """Given a number n, minOperationsis a method that calculates the fewest
        number of operations needed to result in exactly n H characters in
        the file."""
+    if (n <= 1):
+        return 0
     char = 'H'
     min_op = n
     top_limit = n // 2
