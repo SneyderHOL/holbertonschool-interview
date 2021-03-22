@@ -1,4 +1,4 @@
-#include "holberton.h"
+#include "palindrome.h"
 
 /**
  * is_palindrome - function that checks whether or not a given unsigned
@@ -10,5 +10,6 @@
 
 int is_palindrome(unsigned long n)
 {
+	n = n * 1;
 	return (1);
 }
