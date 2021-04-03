@@ -11,9 +11,4 @@ def validUTF8(data):
     num_bytes = 0
     bytes_left = 0
     init = True
-    for element in data:
-        last_byte = format(element, '#010b')[-8:]
-        if (last_byte.startswith('11') or (int(last_byte) == 0)):
-        if not (last_byte.startswith('10') or last_byte.startswith('0')):
-            return False
     return True
