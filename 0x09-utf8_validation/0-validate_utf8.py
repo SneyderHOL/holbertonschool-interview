@@ -21,7 +21,9 @@ def validUTF8(data):
             return False
         if init:
             bytes_left = num_bytes
-        if (init and bytes_left == 0) or ((not init) and num_bytes != 1):
+        if init and bytes_left == 0:
+            continue
+        if (not init) and num_bytes != 1:
             return False
         init = False
         bytes_left -= 1
