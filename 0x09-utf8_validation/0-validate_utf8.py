@@ -12,6 +12,8 @@ def validUTF8(data):
     bytes_left = 0
     init = True
     for byte in data:
+        if (not init) and bytes_left == 0:
+            init = True
         num_bytes = 0
         str_byte = format(byte, '#010b')[-8:]
         match = re.match(regex, str_byte)
