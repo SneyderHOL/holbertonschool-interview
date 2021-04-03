@@ -29,4 +29,7 @@ def validUTF8(data):
             return False
         init = False
         bytes_left -= 1
+    else:
+        if bytes_left != 0:
+            return False
     return True
