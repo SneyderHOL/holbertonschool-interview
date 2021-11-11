@@ -19,11 +19,7 @@ request(url, async function (error, response, body) {
   for (const url of movieResponseBody.characters) {
     const name = await new Promise((resolve, reject) => {
       request(url, (error, response, body) => {
-        if (error) {
-          reject(error);
-        }
-
-        if (response.statusCode !== 200) {
+        if (error || response.statusCode !== 200) {
           reject(error);
         }
 
