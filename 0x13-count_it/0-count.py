@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 """Count it! module"""
 
-import sys
 import requests
+import sys
 
 REDDIT_URL = 'https://reddit.com/r/'
 USER_AGENT = 'auxiliar-ua'
